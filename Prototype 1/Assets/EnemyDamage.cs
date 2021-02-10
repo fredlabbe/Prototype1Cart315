@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     // Start is called before the first frame update 
-    float Health = 100f;
+    public float Health = 100f;
+    //public Animator sword;
     void Start()
     {
         
@@ -24,7 +25,8 @@ public class EnemyDamage : MonoBehaviour
     } 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Melee")
+        //other.GetComponent.< Animation > ().animator.GetCurrentAnimatorStateInfo(0).IsName("attacking")
+        if (other.tag == "Melee")
         {
             Debug.Log("hit target");
             Destroy(gameObject);
